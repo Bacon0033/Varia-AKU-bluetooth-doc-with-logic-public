@@ -539,5 +539,4 @@ Here's a summary of everything possible with this protocol:
 
 ---
 
-*This documentation was created through manual Bluetooth packet analysis. Varia has no official documentation for their BLE protocol. All findings are from reverse engineering and may not be 100% complete.*
-
+*This documentation was created through manual Bluetooth packet analysis. Varia has no official documentation for their BLE protocol. All findings are from reverse engineering.*
