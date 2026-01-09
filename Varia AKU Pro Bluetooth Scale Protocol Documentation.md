@@ -1,6 +1,7 @@
 # Varia AKU Pro Bluetooth Scale Protocol Documentation
  
 **Author: Tyler Swensen**
+
 **Target Scale:** Varia AKU Pro (Should work with other Varia AKU scales)
 
 ---
