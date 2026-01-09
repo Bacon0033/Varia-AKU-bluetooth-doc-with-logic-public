@@ -433,7 +433,6 @@ function isCupPlacement(weightDelta: number): boolean {
   return weightDelta > CUP_PLACEMENT_THRESHOLD;
 }
 
-// in your weight handler
 function onWeightUpdate(newWeight: number) {
   const delta = newWeight - previousWeight;
   
