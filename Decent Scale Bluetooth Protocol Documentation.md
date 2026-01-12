@@ -13,7 +13,7 @@ This is everything I discovered about the Decent Scale's Bluetooth protocol thro
 ### Device Discovery
 
 The Decent Scale advertises with a name starting with "Decent". When scanning for BLE devices, filter for:
-- `decent` (case-insensitive, matches start of name)
+- `decent` (case-insensitive)
 
 ### Connection
 
@@ -85,7 +85,7 @@ For weight messages (`0xCE` or `0xCA`):
 
 ```python
 def parse_weight(data: bytes) -> tuple[float, bool] | None:
-    # returns (weight in grams, is_stable), or None if invalid packet.
+    # returns (weight in grams, is_stable), or None if invalid
     if len(data) < 7:  # validate minimum length
         return None
     
@@ -155,7 +155,7 @@ def calculate_xor(data: bytes) -> int:
 def get_xor(data: bytes) -> int:
     return data[0] ^ data[1] ^ data[2] ^ data[3] ^ data[4] ^ data[5]
 
-# Tare command with counter
+# tare command with counter
 tare_counter = 0
 
 def build_tare_command() -> bytes:
@@ -165,7 +165,7 @@ def build_tare_command() -> bytes:
     tare_counter = (tare_counter + 1) % 256
     return cmd
 
-# Timer commands
+# timer
 def build_timer_command(action: str) -> bytes:
     if action == 'start':
         arg = 0x03
@@ -176,12 +176,12 @@ def build_timer_command(action: str) -> bytes:
     data = bytes([0x03, 0x0B, arg, 0x00, 0x00, 0x00])
     return data + bytes([get_xor(data)])
 
-# LED control
+# LED
 def build_led_command(weight_on: bool, timer_on: bool) -> bytes:
     data = bytes([0x03, 0x0A, int(weight_on), int(timer_on), 0x00, 0x00])
     return data + bytes([get_xor(data)])
 
-# Keep alive (send every 2 seconds)
+# Keep alive
 CMD_KEEP_ALIVE = bytes([0x03, 0x0A, 0x03, 0xFF, 0xFF, 0x00, 0x0A])
 
 async def tare_scale(client):
