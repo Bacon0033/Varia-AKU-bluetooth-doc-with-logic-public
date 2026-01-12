@@ -6,7 +6,7 @@
 
 ---
 
-This is everything I discovered about the Decent Scale's Bluetooth protocol through manual packet sniffing and/or documentation written by Decent. Hopefully, this saves you the hours I spent figuring it out!
+This is everything I discovered about the Decent Scale's Bluetooth protocol through **manual packet sniffing and/or documentation written by Decent**. Hopefully, this saves you the hours I spent figuring it out!
 
 ---
 
