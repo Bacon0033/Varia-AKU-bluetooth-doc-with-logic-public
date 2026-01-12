@@ -6,7 +6,7 @@
 
 ---
 
-This is everything I discovered about the Bookoo Mini Scale's Bluetooth protocol through manual packet sniffing, along with some algorithms I use to calculate my data. There's no official documentation from Bookoo, so I had to reverse-engineer all of this. Hopefully, this saves you the hours I spent figuring it out!
+This is everything I discovered about the Bookoo Mini Scale's Bluetooth protocol through **manual packet sniffing and/or documentation written by Bookoo Mini Scale's**. Hopefully, this saves you the hours I spent figuring it out!
 
 ---
 
